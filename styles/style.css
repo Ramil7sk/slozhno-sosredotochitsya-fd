@@ -45,7 +45,8 @@ h2, h3, h4 {
   block-size: 9px;
 }
 
-.header::after {
+.header::after,
+.footer::after {
   content: "";
   position: absolute;
   display: block;
@@ -57,7 +58,8 @@ h2, h3, h4 {
   inset-block-end: var(--padding);
 }
 
-.header::before {
+.header::before,
+.footer::before {
   content: "";
   position: absolute;
   display: block;
@@ -159,7 +161,24 @@ h2, h3, h4 {
 
 .gallery__image {
   object-fit: cover;
-  width: 100%;
-  height: 100%;
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+.footer {
+  position: relative;
+  block-size: max(668px, 100vb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--padding);
+}
+
+.footer__content {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  color: var(--header-title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  padding: var(--padding);
 }
 
