@@ -150,3 +150,16 @@ h2, h3, h4 {
 .card__link:focus-visible {
   outline: 1px solid var(--text-color);
 }
+
+.question-section.gallery {
+  display: grid;
+  grid-template-rows: auto 142px 355px 237px 355px 237px;
+  gap: 10px;
+}
+
+.gallery__image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
