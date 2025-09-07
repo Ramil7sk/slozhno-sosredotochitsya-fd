@@ -1,4 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+h2, h3, h4 {
+  font-size: inherit;
+}
 
 .page {
   background-image: var(--background-image);  
@@ -9,6 +12,7 @@
   font-family: var(--font-family, 'IBM Plex Mono', monospace);
   font-size: var(--font-size);
   line-height: var(--line-height);
+  color: var(--text-color);
 }
 
 .header {
@@ -99,7 +103,50 @@
 }
 
 .title-decor {
-  color: var(header-description-color);
+  color: var(--header-description-color);
   font-weight: 700;
   background-color: var(--accent-color);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 40px var(--padding);
+  gap: 50px;
+}
+
+.question-section {
+  display: grid;
+  gap: 19px;
+}
+
+.question-section__title {
+  color: var(--accent-color);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.card__link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.card__link:hover {
+  border-bottom: 1px solid var(--text-color);
+}
+
+.card__link:focus {
+  outline: none;
+}
+
+.card__link:focus-visible {
+  outline: 1px solid var(--text-color);
 }
