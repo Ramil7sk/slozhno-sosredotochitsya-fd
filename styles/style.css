@@ -22,7 +22,7 @@ h4 {
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   justify-items: end;
-  align-items: start; 
+  align-items: start;
   padding: var(--padding);
   block-size: max(668px, 100vb);
 }
@@ -211,11 +211,7 @@ h4 {
   }
   
   .header__description {
-    max-inline-size: 491px;
     align-self: center;
-  }
-
-  .header__description {
     margin-block: 0;
     max-inline-size: 365px;
   }
@@ -291,9 +287,6 @@ h4 {
 
   .header__theme-menu {
     justify-self: center;
-  }
-
-  .header__theme-menu {
     padding: 0;
   }
 
