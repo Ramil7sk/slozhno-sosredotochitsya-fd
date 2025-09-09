@@ -248,7 +248,7 @@ h4 {
 
   .question-section.gallery {
     grid-template-rows: auto 192px 230px 318px;
-    gap: 20px;
+    gap: 21px;
   }
 
   .gallery__title {
@@ -313,8 +313,12 @@ h4 {
     margin-inline-start: -20px;
   }
 
+  .question-section {
+    gap: 19px;
+  }
+
   .question-section--factors {
-    gap: 20px;
+    gap: 15px 19px;
   }
 
   .question-section--factors .card {
@@ -324,6 +328,7 @@ h4 {
 
   .question-section.gallery {
     grid-template-rows: auto 260px 315px 436px;
+    gap: 18px;
   }
 
   .footer {
