@@ -14,3 +14,7 @@
   --border-style: 1px solid #FF0070;
   --menu-button-color: #ff0070;
 }
+
+.theme-dark .header__decor {
+  display: inline-flex;
+}
