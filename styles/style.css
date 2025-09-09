@@ -1,43 +1,45 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-h2, h3, h4 {
+h2,
+h3,
+h4 {
   font-size: inherit;
 }
 
 .page {
-  background-image: var(--background-image);  
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-color: var(--background-color);
-  font-family: var(--font-family, 'IBM Plex Mono', monospace);
+  color: var(--text-color);
+  font-family: var(--font-family, "IBM Plex Mono", monospace);
   font-size: var(--font-size);
   line-height: var(--line-height);
-  color: var(--text-color);
+  background-color: var(--background-color);
+  background-image: var(--background-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .header {
   position: relative;
-  block-size: max(668px, 100vb);
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   justify-items: end;
-  gap: 10px;
+  align-items: start; 
   padding: var(--padding);
-  align-items: start;
+  block-size: max(668px, 100vb);
 }
 
 .header__decor {
   position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent-color);
   inset-block-start: 10px;
   inset-inline-end: 18px;
-  color: var(--accent-color);
-  display: inline-flex;
-  gap: 10px;
-  align-items: center;
 }
 
-.header__decor::after{
+.header__decor::after {
   content: "";
+  display: inline-flex;
   border-radius: 50%;
   box-shadow: 0 0 2px 2px var(--accent-color);
   background: var(--accent-color);
@@ -50,10 +52,10 @@ h2, h3, h4 {
   content: "";
   position: absolute;
   display: block;
-  block-size: 25px;
-  inline-size: 25px;
   border-inline-start: 1px solid var(--accent-color);
   border-block-end: 1px solid var(--accent-color);
+  block-size: 25px;
+  inline-size: 25px;
   inset-inline-start: var(--padding);
   inset-block-end: var(--padding);
 }
@@ -63,17 +65,16 @@ h2, h3, h4 {
   content: "";
   position: absolute;
   display: block;
+  border-inline-end: var(--border-style);
+  border-block-start: var(--border-style);
   block-size: 25px;
   inline-size: 25px;
-  border-inline-end: 1px solid var(--accent-color);
-  border-block-start: 1px solid var(--accent-color);
   inset-inline-end: var(--padding);
   inset-block-start: var(--padding);
 }
 
-
 .header__theme-menu {
-    margin-block-start: var(--menu-margin);
+  margin-block-start: var(--menu-margin);
 }
 
 .header__theme-menu-list {
@@ -83,25 +84,28 @@ h2, h3, h4 {
 }
 
 .header__theme-menu-button {
-    border: none;
-    padding: 0px 13px;
-    color: var(--accent-color);
-    text-transform: lowercase;
-    background-color: transparent;
-    cursor: pointer;
+  border: none;
+  padding: 0px 13px;
+  color: var(--menu-button-color);
+  text-transform: lowercase;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__theme-menu-button_active {
+  border: var(--border-style);
 }
 
 .header__title {
+  justify-self: start;
+  color: var(--header-title-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 82.5%;
-  color: var(--header-title-color);
-  text-shadow: 4px 4px 0 var(--accent-color);
-  justify-self: start;
+  text-shadow: 4px 4px 0 var(--header-title-shadow);
 }
 
 .header__description {
-  /* align-self: start; */
-  margin-block-start: 45px;
+  align-self: center;
 }
 
 .title-decor {
@@ -113,8 +117,8 @@ h2, h3, h4 {
 .main {
   display: flex;
   flex-direction: column;
-  padding: var(--main-padding-block) var(--padding);
   gap: 50px;
+  padding: var(--main-padding-block) var(--padding);
 }
 
 .question-section {
@@ -123,7 +127,7 @@ h2, h3, h4 {
 }
 
 .question-section__title {
-  color: var(--accent-color);
+  color: var(--text-color);
 }
 
 .card {
@@ -167,48 +171,48 @@ h2, h3, h4 {
 
 .footer {
   position: relative;
-  block-size: max(668px, 100vb);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: var(--padding);
+  block-size: max(668px, 100vb);
 }
 
 .footer__content {
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  font-weight: 700;
-  line-height: 82.5%;
-  color: var(--header-title-color);
-  text-shadow: 4px 4px 0 var(--accent-color);
   padding: var(--padding);
+  color: var(--header-title-color);
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  text-shadow: 4px 4px 0 var(--shadow-color);
 }
 
 @media (min-width: 768px) {
   :root {
     --padding: 20px;
-    --main-padding-block: 73px;
+    --main-padding-block: 60px;
     --main-gap: 80px;
     --menu-margin: 170px;
   }
 
-  .header  {
-    block-size: max(768px, 100vb);
-    padding-left:0;
-    gap: 168px; 
+  .header {
     height: 100%;
+    min-block-size: max(1024px, 100vb);;
   }
 
   .header__decor {
-    inset-block-start: 19px;
-    inset-inline-end: 32px;
+    inset-block-start: 21px;
+    inset-inline-end: 30px;
   }
 
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-inline-start: -20px;
   }
-
+  
   .header__description {
     max-inline-size: 491px;
+    align-self: center;
   }
 
   .header__description {
@@ -219,7 +223,7 @@ h2, h3, h4 {
   .question-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px 24px;
+    gap: 18px 40px;
   }
 
   .card {
@@ -244,7 +248,7 @@ h2, h3, h4 {
 
   .question-section.gallery {
     grid-template-rows: auto 192px 230px 318px;
-    gap: 18px;
+    gap: 20px;
   }
 
   .gallery__title {
@@ -265,13 +269,11 @@ h2, h3, h4 {
 
   .gallery__image:nth-of-type(5) {
     grid-column: span 2;
-  } 
-  
-  .footer {
-    block-size: max(1004px, 100vb);
-
   }
 
+  .footer {
+    block-size: max(1024px, 100vb);
+  }
 }
 
 @media (min-width: 1024px) {
@@ -283,13 +285,12 @@ h2, h3, h4 {
   .header {
     grid-template-rows: 1fr min-content 1fr;
     gap: 0;
-    min-block-size: 768px;
     padding: var(--padding);
+    min-block-size: max(768px, 100vb);
   }
 
   .header__theme-menu {
     justify-self: center;
-    padding-inline-start: 25px;
   }
 
   .header__theme-menu {
@@ -302,9 +303,9 @@ h2, h3, h4 {
   }
 
   .header__description {
-    max-inline-size: 491px;
-    align-self: center;
     justify-self: end;
+    align-self: center;
+    max-inline-size: 491px;
   }
 
   .header__title {
@@ -327,11 +328,9 @@ h2, h3, h4 {
 
   .footer {
     block-size: 768px;
-
   }
 
   .footer__content {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
-
 }
