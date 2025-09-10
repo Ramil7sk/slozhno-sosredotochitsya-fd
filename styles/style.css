@@ -353,10 +353,6 @@ h4 {
     gap: 20px;
   }
 
-  .question-section--factors {
-    gap: 40px;
-  }
-
   .header {
     grid-template-rows: 1fr min-content 1fr;
     gap: 0;
