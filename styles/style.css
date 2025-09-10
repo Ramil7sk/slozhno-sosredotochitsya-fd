@@ -258,13 +258,25 @@ h4 {
     inline-size: 30%;
   }
 
+  .question-section.question-section--advice {
+    gap: 19px 23px;
+  }
+
   .question-section--advice .question-section__title {
     grid-row: span 2;
   }
 
+  .question-section--advice .card {
+    margin-inline-start: 5px;
+  }
+
+  .question-section--advice .question-section__description {
+    margin-inline-start: 5px;
+  }
+
   .question-section.gallery {
     grid-template-rows: auto 192px 230px 318px;
-    gap: 21px;
+    gap: 18px;
   }
 
   .gallery__title {
@@ -344,6 +356,14 @@ h4 {
 
   .question-section {
     gap: 19px;
+  }
+
+  .question-section--advice .card {
+    margin-inline-start: 0;
+  }
+
+  .question-section--advice .question-section__description {
+    margin-inline-start: 0;
   }
 
   .question-section--factors {
