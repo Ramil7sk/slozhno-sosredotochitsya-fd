@@ -12,6 +12,7 @@
   --header-title-shadow:#FF8DCB;
   --text-color: #353430;
   --border-style: 1px solid #353430;
+  --border-style__hover: 1px solid rgba(50, 49, 45, 0.4);
   --menu-button-color: #353430;
   --subtitle-color:#353430;
   --section-title-color: #353430;
@@ -30,7 +31,10 @@
     --header-title-shadow:#FF8DCB;
     --text-color: #353430;
     --border-style: 1px solid #353430;
+    --border-style__hover: 1px solid rgba(50, 49, 45, 0.4);
     --menu-button-color: #353430;
+    --subtitle-color:#353430;
+    --section-title-color: #353430;
   }
 
   .header__decor {

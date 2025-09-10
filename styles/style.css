@@ -108,6 +108,16 @@ h4 {
   align-self: center;
 }
 
+.header__theme-menu-button:hover {
+  border: var(--border-style__hover);
+  cursor: pointer;
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-bottom: var(--border-style);
+}
+
 .title-decor {
   color: var(--subtitle-color);
   font-weight: 700;
@@ -157,13 +167,19 @@ h4 {
   outline: 1px solid var(--text-color);
 }
 
-.question-section.gallery {
-  display: grid;
-  grid-template-rows: auto 142px 355px 237px 355px 237px;
+.gallery {
+  display: flex;
+  flex-direction: column;
   gap: 10px;
 }
 
-.gallery__image {
+.gallery__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.gallery__container img {
   object-fit: cover;
   block-size: 100%;
   inline-size: 100%;
@@ -246,7 +262,7 @@ h4 {
   }
 
   .main {
-    gap: 81px;
+    gap: 80px;
   }
 
   .question-section__description {
@@ -274,16 +290,52 @@ h4 {
     margin-inline-start: 5px;
   }
 
-  .question-section.gallery {
-    grid-template-rows: auto 192px 230px 318px;
-    gap: 18px;
+  .gallery {
+    gap: 20px;
   }
 
-  .gallery__title {
-    grid-column: span 3;
+  .gallery__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
 
-  .gallery__image:nth-of-type(1) {
+  .sunset__picture {
+    /* block-size: clamp(142px, 192px, 260px); */
+    grid-column: span 2;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+
+  .ice-cream__picture {
+    grid-row: span 2;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+
+  .tape__picture {
+    grid-row: span 2;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+
+  .books__picture {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+
+  .street__picture {
+    grid-column: span 2;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+
+  /* .gallery__image:nth-of-type(1) {
     grid-column: span 2;
   }
 
@@ -297,7 +349,7 @@ h4 {
 
   .gallery__image:nth-of-type(5) {
     grid-column: span 2;
-  }
+  } */
 
   .footer {
     block-size: max(1024px, 100vb);

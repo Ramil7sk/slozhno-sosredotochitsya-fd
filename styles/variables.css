@@ -18,6 +18,7 @@
   --header-title-shadow: #FF0070;
   --text-color: #F1B2CE;
   --border-style: 1px solid #FF0070;
+  --border-style__hover: 1px solid #F1B2CE;
   --menu-button-color: #ff0070;
   --section-title-color: #FF0070;
 }
