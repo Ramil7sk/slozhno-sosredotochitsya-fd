@@ -12,10 +12,12 @@
   --padding: 10px;
   --menu-margin: 65px;
   --background-color: #000028;
+  --subtitle-color: #000028;
   --accent-color: #FF0070;
   --header-title-color: #DB00FF;
   --header-title-shadow: #FF0070;
   --text-color: #F1B2CE;
   --border-style: 1px solid #FF0070;
   --menu-button-color: #ff0070;
+  --section-title-color: #FF0070;
 }
