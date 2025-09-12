@@ -211,13 +211,7 @@ h4 {
 .wrapper {
   display: flex;
   flex-direction: column;
-  gap: 21px;
-}
-
-.wrapper__card {
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
+  gap: 19px;
 }
 
 @media (min-width: 768px) {
@@ -289,7 +283,7 @@ h4 {
   }
 
   .gallery {
-    gap: 20px;
+    gap: 18px;
   }
 
   .gallery__container {
@@ -383,6 +377,10 @@ h4 {
 
   .question-section {
     gap: 19px;
+  }
+
+   .wrapper .card {
+    grid-column: span 1 ;
   }
 
   .question-section--advice .card {
